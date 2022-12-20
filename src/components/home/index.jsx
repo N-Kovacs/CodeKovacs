@@ -1,10 +1,33 @@
+import { useState } from "react";
+
 import reactLogo from "../../assets/react.svg";
-export default function Home() {
+
+import "./Home.css";
+
+export default function Home(props) {
+  const [btnState, setBtnState] = useState("TOOLS");
+
+  const clicked = () => {
+    props.transition(btnState);
+  };
+
   return (
     <div>
       <div>
         <h1>CodeKovacs</h1>
       </div>
+      <div id="menu">
+        <div id="menu-items">
+          <a className="menu-item">Projects</a>
+          <a className="menu-item" onclick={clicked}>
+            Tools
+          </a>
+          <a className="menu-item" onClick={clicked}>
+            Links
+          </a>
+        </div>
+      </div>
+
       <h3>Built with Vite + React</h3>
       <div className="card"></div>
       <p className="read-the-docs">

@@ -7,7 +7,7 @@ import Tools from "./tools"
 export default function Index() {
   const HOME = "HOME"
   const TOOLS = "TOOLS"
-  const { mode, transition } = useVisualMode(HOME);
+  const { mode, transition } = useVisualMode(TOOLS);
 
   return (
     <div>
