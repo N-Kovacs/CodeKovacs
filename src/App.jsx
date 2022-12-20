@@ -1,5 +1,9 @@
 import reactLogo from "./assets/react.svg";
+
+import Index from "./components";
+
 import "./App.css";
+
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
       <a href="https://reactjs.org" target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />
       </a>
+      <Index />
     </div>
   );
 }
