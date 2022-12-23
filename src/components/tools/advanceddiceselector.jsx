@@ -50,16 +50,26 @@ export default function AdvancedDiceSelector(props) {
       lastAction:"Down Score 2"
     }));
   }
+  function hasDuplicates(array) {
+    return (new Set(array)).size !== array.length;
+  }
 
   const rolling = () => {
+    let rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
+    while (hasDuplicates(rolls)){
+      console.log("newrolls")
+      rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
+    }
+
     setState(prev => ({
       ...prev,
-      d4: getRandomInt(4),
-      d6: getRandomInt(6),
-      d10: getRandomInt(10),
-      d12: getRandomInt(12),
-      d20: getRandomInt(20),
+      d4: rolls[0],
+      d6: rolls[1],
+      d10: rolls[2],
+      d12: rolls[3],
+      d20: rolls[4],
     }));
+    console
   };
 
   const items = itemlist.map((item) => {
