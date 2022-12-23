@@ -3,19 +3,33 @@ import { useState } from "react";
 import AdvancedDiceSelectorItem from "./advanceddiceselectoritem";
 
 const itemlist = [
-  { name: "lucina", ranking: 1 },
-  { name: "yoshi", ranking: 2 },
+  { name: "Random", ranking: 1 },
+  { name: "Lucina", ranking: 2 },
+  { name: "Yoshi", ranking: 3 },
+  { name: "Jigglypuff", ranking: 4 },
+  { name: "Captain Falcon", ranking: 5 },
+  { name: "PKMN Trainer", ranking: 6 },
+  { name: "Joker", ranking: 7 },
+  { name: "Wii Fit Trainer", ranking: 8 },
+  { name: "Donkey Kong", ranking: 9 },
+  { name: "Samus", ranking: 10 },
+  { name: "Wolf", ranking: 11 },
+  { name: "ROB", ranking: 12 },
+  { name: "Shulk", ranking: 13 },
+  { name: "Palutena", ranking: 14 },
+  { name: "Byleth", ranking: 15 },
+  { name: "Sepheroth", ranking: 16 },
+  { name: "Cloud", ranking: 17 },
+  { name: "Incineroar", ranking: 18 },
+  { name: "Snake", ranking: 19 },
+  { name: "Steve", ranking: 20 },
 ];
 
 export default function AdvancedDiceSelector(props) {
   const [score1, setScore1] = useState(0)
   const [score2, setScore2] = useState(0)
   const [state, setState] = useState({
-    d4: null,
-    d6: null,
-    d10: null,
-    d12: null,
-    d20: null,
+    rolls: [],
     lastAction: "",
   });
 
@@ -63,11 +77,7 @@ export default function AdvancedDiceSelector(props) {
 
     setState(prev => ({
       ...prev,
-      d4: rolls[0],
-      d6: rolls[1],
-      d10: rolls[2],
-      d12: rolls[3],
-      d20: rolls[4],
+      rolls: rolls
     }));
     console
   };
@@ -78,6 +88,7 @@ export default function AdvancedDiceSelector(props) {
         key={item.ranking}
         ranking={item.ranking}
         name={item.name}
+        rolls={state.rolls}
       />
     );
   });
@@ -90,11 +101,6 @@ export default function AdvancedDiceSelector(props) {
       <button onClick={rolling}>Click to Roll</button>
       <button onClick={upScore2}>1+</button>
       <button onClick={downScore2}>1-</button>
-      <h4>{state.d4}</h4>
-      <h4>{state.d6}</h4>
-      <h4>{state.d10}</h4>
-      <h4>{state.d12}</h4>
-      <h4>{state.d20}</h4>
       <h4>Last Action: {state.lastAction}</h4>
       <table>
         <th>Ranking</th>
