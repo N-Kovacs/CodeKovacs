@@ -4,11 +4,13 @@
   display: flex;
   height: 50vh;
   width: 100vw;
+  
 }
 
 #menu-items:hover > .menu-item {
   opacity: 0.3;
-  font-size:45px;
+  font-size:1.8rem;
+  background-color: red;
 }
 
 #menu-items:hover > .menu-item:hover {
@@ -21,6 +23,8 @@
   margin-left: clamp(0.5rem, 0.5vw, 48rem);
   position: relative;
   z-index: 2;
+  padding-right: 100vw;
+  
   
 }
 
@@ -29,8 +33,10 @@
   cursor: pointer;
   display: block;
   font-family: 'Ibarra Real Nova', serif;
-  font-size: 60px;
-  padding: 30px;
+  font-size: 4rem;
+  padding: 2rem;
+  padding-right: 100vw;
   text-decoration: none;
   transition: opacity 400ms ease, font-size 400ms ease;
+  text-align: left;
 }
