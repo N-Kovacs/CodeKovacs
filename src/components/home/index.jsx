@@ -16,7 +16,7 @@ export default function Home(props) {
       <div>
         <h1>CodeKovacs</h1>
       </div>
-      <div id="menu">
+      <div id="menu" className="menu">
         <div id="menu-items">
           <a className="menu-item">Projects</a>
           <a className="menu-item" onclick={clicked}>

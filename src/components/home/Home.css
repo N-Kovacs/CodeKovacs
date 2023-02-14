@@ -1,21 +1,34 @@
-
-#menu {  
-  align-items: center;
-  display: flex;
-  height: 50vh;
-  width: 100vw;
-  
+#root {
+  margin-left: 1px;
+  background-color: black;
 }
+
+
+
+
+
+
 
 #menu-items:hover > .menu-item {
   opacity: 0.3;
   font-size:1.8rem;
-  background-color: grey;
+  /* background-image: url('./madcap.png') */
+  /* background-color: grey; */
 }
 
 #menu-items:hover > .menu-item:hover {
   opacity: 1; 
   font-size: 60px;
+}
+
+
+
+.menu {  
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  background-color: grey;
 }
 
 
