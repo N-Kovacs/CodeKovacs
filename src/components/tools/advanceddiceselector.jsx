@@ -3,26 +3,6 @@ import { useState } from "react";
 import AdvancedDiceSelectorItem from "./advanceddiceselectoritem";
 
 const itemlist = [
-  { name: "Random", ranking: 1 },
-  { name: "Jigglypuff", ranking: 2 },
-  { name: "Yoshi", ranking: 3 },
-  { name: "Lucina", ranking: 4 },
-  { name: "Captain Falcon", ranking: 5 },
-  { name: "Wii Fit", ranking: 6 },
-  { name: "Joker", ranking: 7 },
-  { name: "Samus", ranking: 8 },
-  { name: "PKMN Trainer", ranking: 9 },
-  { name: "Cloud", ranking: 10 },
-  { name: "Donkey Kong", ranking: 11 },
-  { name: "Rob", ranking: 12 },
-  { name: "Wolf", ranking: 13 },
-  { name: "Steve", ranking: 14 },
-  { name: "Byleth", ranking: 15 },
-  { name: "Palutena", ranking: 16 },
-  { name: "Sephiroph", ranking: 17 },
-  { name: "Link", ranking: 18 },
-  { name: "Incineroar", ranking: 19 },
-  { name: "Zelda", ranking: 20 },
 ];
 
 export default function AdvancedDiceSelector(props) {
@@ -36,43 +16,43 @@ export default function AdvancedDiceSelector(props) {
   function getRandomInt(max) {
     return Math.floor(Math.random() * max)+1;
   }
-  const upScore1 = () => {
-    setScore1(score1+1)
-    setState(prev=>({
-      ...prev,
-      lastAction:"Up Score 1"
-    }));
-  }
-  const upScore2 = () => {
-    setScore2(score2+1)
-    setState(prev=>({
-      ...prev,
-      lastAction:"Up Score 2"
-    }));
-  }
-  const downScore1 = () => {
-    setScore1(score1-1)
-    setState(prev=>({
-      ...prev,
-      lastAction:"Down Score 1"
-    }));
-  }
-  const downScore2 = () => {
-    setScore2(score2-1)
-    setState(prev=>({
-      ...prev,
-      lastAction:"Down Score 2"
-    }));
-  }
+  // const upScore1 = () => {
+  //   setScore1(score1+1)
+  //   setState(prev=>({
+  //     ...prev,
+  //     lastAction:"Up Score 1"
+  //   }));
+  // }
+  // const upScore2 = () => {
+  //   setScore2(score2+1)
+  //   setState(prev=>({
+  //     ...prev,
+  //     lastAction:"Up Score 2"
+  //   }));
+  // }
+  // const downScore1 = () => {
+  //   setScore1(score1-1)
+  //   setState(prev=>({
+  //     ...prev,
+  //     lastAction:"Down Score 1"
+  //   }));
+  // }
+  // const downScore2 = () => {
+  //   setScore2(score2-1)
+  //   setState(prev=>({
+  //     ...prev,
+  //     lastAction:"Down Score 2"
+  //   }));
+  // }
   function hasDuplicates(array) {
     return (new Set(array)).size !== array.length;
   }
 
   const rolling = () => {
-    let rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
+    // let rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
     while (hasDuplicates(rolls)){
       console.log("newrolls")
-      rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
+      // rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
     }
 
     setState(prev => ({
