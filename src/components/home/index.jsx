@@ -6,9 +6,14 @@ import "./Home.css";
 
 export default function Home(props) {
   const [btnState, setBtnState] = useState("TOOLS");
+  const [hoverImageState, setHoverImageState] = useState("url('./madcap.png')")
 
   const clicked = () => {
     props.transition(btnState);
+  };
+
+  const divStyle = {
+    backgroundImage: hoverImageState
   };
 
   return (
@@ -16,10 +21,10 @@ export default function Home(props) {
       <div>
         <h1>CodeKovacs</h1>
       </div>
-      <div id="menu">
+      <div id="menu" className="menu" style = {divStyle}>
         <div id="menu-items">
-          <a className="menu-item">Projects</a>
-          <a className="menu-item" onclick={clicked}>
+          <a className="menu-item" onMouseEnter = {() => setHoverImageState("url('./madcap.png')")}>Projects</a>
+          <a className="menu-item" onClick={clicked} onMouseEnter = {() => setHoverImageState("url('./github.png')")} >
             Tools
           </a>
           <a className="menu-item" onClick={clicked}>
