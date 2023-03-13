@@ -37,31 +37,9 @@ const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 export default function higherlowerAI(props) {
 
 
-  const items = itemlist.map((item) => {
-    return (
-    //   <AdvancedDiceSelectorItem
-    //     key={item.ranking}
-    //     ranking={item.ranking}
-    //     name={item.name}
-    //     rolls={state.rolls}
-    //   />
-    // );
-  });
   return (
-    // <div>
-    //   <h4> Team1: {score1} </h4>
-    //   <h4> Team2: {score2} </h4>
-    //   <button onClick={upScore1}>1+</button>
-    //   <button onClick={downScore1}>1-</button>
-    //   <button onClick={rolling}>Click to Roll</button>
-    //   <button onClick={upScore2}>1+</button>
-    //   <button onClick={downScore2}>1-</button>
-    //   <h4>Last Action: {state.lastAction}</h4>
-    //   <table>
-    //     <th>Ranking</th>
-    //     <th>Name</th>
-    //     {items}
-    //   </table>
-    // </div>
+    <div>
+      <h4> Cards: {score1} </h4>
+    </div>
   );
 }
