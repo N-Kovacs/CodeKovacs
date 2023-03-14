@@ -6,14 +6,14 @@ import "./Home.css";
 
 export default function Home(props) {
   const [btnState, setBtnState] = useState("TOOLS");
-  const [hoverImageState, setHoverImageState] = useState("url('./madcap.png')")
+  const [hoverImageState, setHoverImageState] = useState("")
 
   const clicked = () => {
     props.transition(btnState);
   };
 
   const divStyle = {
-    backgroundImage: hoverImageState
+    backgroundImage: hoverImageState,
   };
 
   return (
@@ -23,8 +23,8 @@ export default function Home(props) {
       </div>
       <div id="menu" className="menu" style = {divStyle}>
         <div id="menu-items">
-          <a className="menu-item" onMouseEnter = {() => setHoverImageState("url('./madcap.png')")}>Projects</a>
-          <a className="menu-item" onClick={clicked} onMouseEnter = {() => setHoverImageState("url('./github.png')")} >
+          <a className="menu-item" onMouseEnter = {() => setHoverImageState("url('./madcap.png')")} onMouseLeave = {() => setHoverImageState("")}>Projects</a>
+          <a className="menu-item" onClick={clicked} onMouseEnter = {() => setHoverImageState("url('./github.png')")} onMouseLeave = {() => setHoverImageState("")} >
             Tools
           </a>
           <a className="menu-item" onClick={clicked}>
