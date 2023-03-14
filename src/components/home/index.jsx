@@ -25,10 +25,10 @@ export default function Home(props) {
         <div id="menu-items">
           <a className="menu-item" onMouseEnter = {() => setHoverImageState("url('./madcap.png')")} onMouseLeave = {() => setHoverImageState("")}>Projects</a>
           <a className="menu-item" onClick={clicked} onMouseEnter = {() => setHoverImageState("url('./github.png')")} onMouseLeave = {() => setHoverImageState("")} >
-            Tools
+            Links
           </a>
           <a className="menu-item" onClick={clicked}>
-            Links
+            Tools
           </a>
         </div>
       </div>
