@@ -7,54 +7,45 @@
   color: rgb(240, 240, 240);
 }
 
-
-
 #menu-items:hover > .menu-item {
   opacity: 0.3;
-  font-size:1.8rem;
+  font-size: 1.8rem;
   color: black;
   /* background-image: url('./madcap.png') */
   /* background-color: grey; */
 }
 
 #menu-items:hover > .menu-item:hover {
-  opacity: 1; 
+  opacity: 1;
   font-size: 4.5rem;
-  color:darkgray;
+  color: darkgray;
 }
 
-
-
-
-.menu {  
+.menu {
   align-items: center;
   display: flex;
   height: 50vh;
   width: 100vw;
   background-color: black;
-   /* TRANSITION */
+  /* TRANSITION */
   -webkit-transition: background-image 400ms ease;
   -moz-transition: background-image 400ms ease;
   -o-transition: background-image 400ms ease;
   transition: background-image 400ms ease;
-  
 }
-
 
 #menu-items {
   margin-left: clamp(0.5rem, 0.5vw, 48rem);
   position: relative;
   z-index: 2;
   padding-right: 100vw;
-  
-  
 }
 
 .menu-item {
   color: white;
   cursor: pointer;
   display: block;
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
   font-size: 4rem;
   padding: 2rem;
   padding-right: 100vw;

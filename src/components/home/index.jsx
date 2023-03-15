@@ -6,7 +6,7 @@ import "./Home.css";
 
 export default function Home(props) {
   const [btnState, setBtnState] = useState("TOOLS");
-  const [hoverImageState, setHoverImageState] = useState("")
+  const [hoverImageState, setHoverImageState] = useState("");
 
   const clicked = () => {
     props.transition(btnState);
@@ -21,10 +21,21 @@ export default function Home(props) {
       <div>
         <h1 id="title">CodeKovacs</h1>
       </div>
-      <div id="menu" className="menu" style = {divStyle}>
+      <div id="menu" className="menu" style={divStyle}>
         <div id="menu-items">
-          <a className="menu-item" onMouseEnter = {() => setHoverImageState("url('./madcap.png')")} onMouseLeave = {() => setHoverImageState("")}>Projects</a>
-          <a className="menu-item" onClick={clicked} onMouseEnter = {() => setHoverImageState("url('./github.png')")} onMouseLeave = {() => setHoverImageState("")} >
+          <a
+            className="menu-item"
+            onMouseEnter={() => setHoverImageState("url('./madcap.png')")}
+            onMouseLeave={() => setHoverImageState("")}
+          >
+            Projects
+          </a>
+          <a
+            className="menu-item"
+            onClick={clicked}
+            onMouseEnter={() => setHoverImageState("url('./github.png')")}
+            onMouseLeave={() => setHoverImageState("")}
+          >
             Links
           </a>
           <a className="menu-item" onClick={clicked}>
