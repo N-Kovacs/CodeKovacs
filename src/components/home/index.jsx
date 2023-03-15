@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import reactLogo from "../../assets/react.svg";
 
 import "./Home.css";
 
 export default function Home(props) {
-  const [btnState, setBtnState] = useState("TOOLS");
+  const [btnState, setBtnState] = useState("");
   const [hoverImageState, setHoverImageState] = useState("");
 
   const clicked = () => {
@@ -25,7 +25,12 @@ export default function Home(props) {
         <div id="menu-items">
           <a
             className="menu-item"
-            onMouseEnter={() => setHoverImageState("url('./madcap.png')")}
+            onClick={clicked}
+            onMouseEnter={(ev) => {
+              setHoverImageState("url('./madcap.png')");
+              setBtnState("PROJECTS");
+              // console.log("Projects");
+            }}
             onMouseLeave={() => setHoverImageState("")}
           >
             Projects
@@ -33,12 +38,22 @@ export default function Home(props) {
           <a
             className="menu-item"
             onClick={clicked}
-            onMouseEnter={() => setHoverImageState("url('./github.png')")}
+            onMouseEnter={(ev) => {
+              setHoverImageState("url('./github.png')");
+              setBtnState("LINKS");
+            }}
             onMouseLeave={() => setHoverImageState("")}
           >
             Links
           </a>
-          <a className="menu-item" onClick={clicked}>
+          <a
+            className="menu-item"
+            onClick={clicked}
+            onMouseEnter={(ev) => {
+              setHoverImageState("url('./github.png')");
+              setBtnState("TOOLS");
+            }}
+          >
             Tools
           </a>
         </div>
