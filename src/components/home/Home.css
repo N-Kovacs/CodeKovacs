@@ -3,6 +3,9 @@
   background-color: black;
 }
 
+#title {
+  color: rgb(240, 240, 240);
+}
 
 
 
@@ -29,6 +32,10 @@
   height: 50vh;
   width: 100vw;
   background-color: black;
+   /* TRANSITION */
+  -webkit-transition: background-image 400ms ease;
+  -moz-transition: background-image 400ms ease;
+  -o-transition: background-image 400ms ease;
   transition: background-image 400ms ease;
   
 }

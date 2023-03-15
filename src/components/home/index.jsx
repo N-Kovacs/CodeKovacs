@@ -19,7 +19,7 @@ export default function Home(props) {
   return (
     <div>
       <div>
-        <h1>CodeKovacs</h1>
+        <h1 id="title">CodeKovacs</h1>
       </div>
       <div id="menu" className="menu" style = {divStyle}>
         <div id="menu-items">
