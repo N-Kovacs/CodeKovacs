@@ -27,7 +27,7 @@ export default function Home(props) {
             className="menu-item"
             onClick={clicked}
             onMouseEnter={(ev) => {
-              setHoverImageState("url('./madcap.png')");
+              setHoverImageState("url('./projects.png')");
               setBtnState("PROJECTS");
               // console.log("Projects");
             }}
@@ -39,7 +39,7 @@ export default function Home(props) {
             className="menu-item"
             onClick={clicked}
             onMouseEnter={(ev) => {
-              setHoverImageState("url('./github.png')");
+              setHoverImageState("url('./links.png')");
               setBtnState("LINKS");
             }}
             onMouseLeave={() => setHoverImageState("")}
@@ -50,9 +50,10 @@ export default function Home(props) {
             className="menu-item"
             onClick={clicked}
             onMouseEnter={(ev) => {
-              setHoverImageState("url('./github.png')");
+              setHoverImageState("url('./tools.png')");
               setBtnState("TOOLS");
             }}
+            onMouseLeave={() => setHoverImageState("")}
           >
             Tools
           </a>

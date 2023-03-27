@@ -18,7 +18,7 @@
 #menu-items:hover > .menu-item:hover {
   opacity: 1;
   font-size: 4.5rem;
-  color: darkgray;
+  color: rgb(136, 135, 135);
 }
 
 .menu {
