@@ -17,12 +17,10 @@ export default function Projects(props) {
   };
   const divStyle = {
     backgroundImage: hoverImageState,
-    opacity: 0.1,
   };
 
   return (
     <div>
-      Hello There
       <div id="menu" className="menu" style={divStyle}>
         <div id="menu-items">
           <a
@@ -36,8 +34,8 @@ export default function Projects(props) {
             onMouseLeave={() => setHoverImageState("")}
           >
             MadCap
-            {display === MADCAP && <Madcap />}
           </a>
+          {display === MADCAP && <Madcap />}
           <a
             className="menu-item"
             onClick={clickedcontent}
