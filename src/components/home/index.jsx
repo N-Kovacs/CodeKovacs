@@ -20,6 +20,10 @@ export default function Home(props) {
     <div>
       <div>
         <h1 id="title">CodeKovacs</h1>
+        <h2 id="title">
+          A WIP collection website for the projects of Nicholas Kovacs
+        </h2>
+        <h3 id="title">Content shown here is in an early progress state</h3>
       </div>
       <div id="menu" className="menu" style={divStyle}>
         <div id="menu-items">
