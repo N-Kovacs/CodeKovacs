@@ -1,9 +1,12 @@
 import { useState } from "react";
+import Madcap from "./madcap";
+
 import "./projects.css";
 
 export default function Projects(props) {
   const [btnState, setBtnState] = useState("HOME");
   const [hoverImageState, setHoverImageState] = useState("");
+  const MADCAP = "MADCAP";
   const clicked = () => {
     props.transition(btnState);
   };
@@ -29,6 +32,7 @@ export default function Projects(props) {
             }}
             onMouseLeave={() => setHoverImageState("")}
           >
+            {mode === MADCAP && <Madcap />}
             MadCap
           </a>
           <a
