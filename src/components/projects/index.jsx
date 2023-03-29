@@ -17,6 +17,7 @@ export default function Projects(props) {
   };
   const divStyle = {
     backgroundImage: hoverImageState,
+    opacity: 0.1,
   };
 
   return (

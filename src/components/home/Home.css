@@ -11,6 +11,7 @@
   opacity: 0.3;
   font-size: 1.8rem;
   color: black;
+
   /* background-image: url('./madcap.png') */
   /* background-color: grey; */
 }
@@ -18,7 +19,8 @@
 #menu-items:hover > .menu-item:hover {
   opacity: 1;
   font-size: 4.5rem;
-  color: rgb(136, 135, 135);
+  color: rgb(0, 0, 0);
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .menu {
@@ -27,6 +29,10 @@
   height: 50vh;
   width: 100vw;
   background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   /* TRANSITION */
   -webkit-transition: background-image 400ms ease;
   -moz-transition: background-image 400ms ease;

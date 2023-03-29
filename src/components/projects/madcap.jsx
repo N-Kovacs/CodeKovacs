@@ -1,7 +1,9 @@
+import "./projects.css";
+
 export default function Madcap() {
   return (
     <div>
-      <h4>Hello</h4>
+      <p className="clickinfo"></p>
     </div>
   );
 }
