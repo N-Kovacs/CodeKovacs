@@ -1,7 +1,7 @@
 export default function Madcap() {
   return (
     <div>
-      <AdvancedDiceSelector />
+      <h4>Hello</h4>
     </div>
   );
 }

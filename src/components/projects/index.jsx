@@ -6,12 +6,14 @@ import "./projects.css";
 export default function Projects(props) {
   const [btnState, setBtnState] = useState("HOME");
   const [hoverImageState, setHoverImageState] = useState("");
+  const [display, setDisplay] = useState("");
+
   const MADCAP = "MADCAP";
   const clicked = () => {
     props.transition(btnState);
   };
   const clickedcontent = () => {
-    //do stuff to show info
+    setDisplay(btnState);
   };
   const divStyle = {
     backgroundImage: hoverImageState,
@@ -32,8 +34,8 @@ export default function Projects(props) {
             }}
             onMouseLeave={() => setHoverImageState("")}
           >
-            {mode === MADCAP && <Madcap />}
             MadCap
+            {display === MADCAP && <Madcap />}
           </a>
           <a
             className="menu-item"
@@ -52,7 +54,7 @@ export default function Projects(props) {
             onClick={clicked}
             onMouseEnter={(ev) => {
               setHoverImageState("url('./projects.png')");
-              setBtnState("PROJECTS");
+              setBtnState("HOME");
               // console.log("Projects");
             }}
             onMouseLeave={() => setHoverImageState("")}
