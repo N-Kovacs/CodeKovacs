@@ -2,64 +2,75 @@ import { useState } from "react";
 
 import AdvancedDiceSelectorItem from "./advanceddiceselectoritem";
 
-const itemlist = [
-];
+const itemlist = [];
 
 export default function AdvancedDiceSelector(props) {
-  const [score1, setScore1] = useState(0)
-  const [score2, setScore2] = useState(0)
+  const [score1, setScore1] = useState(0);
+  const [score2, setScore2] = useState(0);
   const [state, setState] = useState({
     rolls: [],
     lastAction: "",
   });
 
   function getRandomInt(max) {
-    return Math.floor(Math.random() * max)+1;
+    return Math.floor(Math.random() * max) + 1;
   }
-  // const upScore1 = () => {
-  //   setScore1(score1+1)
-  //   setState(prev=>({
-  //     ...prev,
-  //     lastAction:"Up Score 1"
-  //   }));
-  // }
-  // const upScore2 = () => {
-  //   setScore2(score2+1)
-  //   setState(prev=>({
-  //     ...prev,
-  //     lastAction:"Up Score 2"
-  //   }));
-  // }
-  // const downScore1 = () => {
-  //   setScore1(score1-1)
-  //   setState(prev=>({
-  //     ...prev,
-  //     lastAction:"Down Score 1"
-  //   }));
-  // }
-  // const downScore2 = () => {
-  //   setScore2(score2-1)
-  //   setState(prev=>({
-  //     ...prev,
-  //     lastAction:"Down Score 2"
-  //   }));
-  // }
+  const upScore1 = () => {
+    setScore1(score1 + 1);
+    setState((prev) => ({
+      ...prev,
+      lastAction: "Up Score 1",
+    }));
+  };
+  const upScore2 = () => {
+    setScore2(score2 + 1);
+    setState((prev) => ({
+      ...prev,
+      lastAction: "Up Score 2",
+    }));
+  };
+  const downScore1 = () => {
+    setScore1(score1 - 1);
+    setState((prev) => ({
+      ...prev,
+      lastAction: "Down Score 1",
+    }));
+  };
+  const downScore2 = () => {
+    setScore2(score2 - 1);
+    setState((prev) => ({
+      ...prev,
+      lastAction: "Down Score 2",
+    }));
+  };
   function hasDuplicates(array) {
-    return (new Set(array)).size !== array.length;
+    return new Set(array).size !== array.length;
   }
 
   const rolling = () => {
-    // let rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
-    while (hasDuplicates(rolls)){
-      console.log("newrolls")
-      // rolls = [getRandomInt(4), getRandomInt(6), getRandomInt(10), getRandomInt(12), getRandomInt(20)]
+    let rolls = [
+      getRandomInt(4),
+      getRandomInt(6),
+      getRandomInt(10),
+      getRandomInt(12),
+      getRandomInt(20),
+    ];
+    while (hasDuplicates(rolls)) {
+      console.log("newrolls");
+      rolls = [
+        getRandomInt(4),
+        getRandomInt(6),
+        getRandomInt(10),
+        getRandomInt(12),
+        getRandomInt(20),
+      ];
     }
 
-    setState(prev => ({
+    setState((prev) => ({
       ...prev,
-      rolls: rolls
+      rolls: rolls,
     }));
-    console
+    console;
   };
 
   const items = itemlist.map((item) => {

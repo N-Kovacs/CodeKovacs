@@ -1,66 +1,68 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Madcap from "./madcap";
 
-import reactLogo from "../../assets/react.svg";
+import "./projects.css";
 
-import "./Home.css";
-
-export default function Home(props) {
-  const [btnState, setBtnState] = useState("");
+export default function Projects(props) {
+  const [btnState, setBtnState] = useState("HOME");
   const [hoverImageState, setHoverImageState] = useState("");
+  const [display, setDisplay] = useState("");
 
+  const MADCAP = "MADCAP";
   const clicked = () => {
     props.transition(btnState);
   };
-
+  const clickedcontent = () => {
+    setDisplay(btnState);
+  };
   const divStyle = {
     backgroundImage: hoverImageState,
   };
 
   return (
     <div>
-      <div>
-        <h1 id="title">CodeKovacs</h1>
-      </div>
       <div id="menu" className="menu" style={divStyle}>
         <div id="menu-items">
+          <a
+            className="menu-item"
+            onClick={clickedcontent}
+            onMouseEnter={(ev) => {
+              setHoverImageState("url('./projects.png')");
+              setBtnState("MADCAP");
+              // console.log("Projects");
+            }}
+            onMouseLeave={() => setHoverImageState("")}
+          >
+            MadCap
+          </a>
+          {display === MADCAP && <Madcap />}
+          <a
+            className="menu-item"
+            onClick={clickedcontent}
+            onMouseEnter={(ev) => {
+              setHoverImageState("url('./projects.png')");
+              setBtnState("MADCAP");
+              // console.log("Projects");
+            }}
+            onMouseLeave={() => setHoverImageState("")}
+          >
+            CodeKovacs
+          </a>
           <a
             className="menu-item"
             onClick={clicked}
             onMouseEnter={(ev) => {
               setHoverImageState("url('./projects.png')");
-              setBtnState("PROJECTS");
+              setBtnState("HOME");
               // console.log("Projects");
             }}
             onMouseLeave={() => setHoverImageState("")}
           >
-            Projects
-          </a>
-          <a
-            className="menu-item"
-            onClick={clicked}
-            onMouseEnter={(ev) => {
-              setHoverImageState("url('./links.png')");
-              setBtnState("LINKS");
-            }}
-            onMouseLeave={() => setHoverImageState("")}
-          >
-            Links
-          </a>
-          <a
-            className="menu-item"
-            onClick={clicked}
-            onMouseEnter={(ev) => {
-              setHoverImageState("url('./tools.png')");
-              setBtnState("TOOLS");
-            }}
-            onMouseLeave={() => setHoverImageState("")}
-          >
-            Tools
+            Back
           </a>
         </div>
       </div>
-
-      <h3>Built with Vite + React</h3>
+      ;
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.clickinfo {
+  color: rgb(94, 86, 86);
+  font-size: 1.5rem;
+  text-align: left;
+  display: block;
+  font-family: "Ibarra Real Nova", serif;
+  padding: 2rem;
+  max-width: 75%;
+}
